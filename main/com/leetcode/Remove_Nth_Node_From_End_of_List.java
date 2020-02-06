@@ -10,7 +10,7 @@ public class Remove_Nth_Node_From_End_of_List {
 		}
 	}
 	
-	public ListNode removeNthFromEnd(ListNode head, int n) {
+	public static ListNode removeNthFromEnd(ListNode head, int n) {
         ListNode slow, fast, curr;
         slow = head; fast = head;
         for (int i = 0; i < n; i++)
@@ -31,8 +31,12 @@ public class Remove_Nth_Node_From_End_of_List {
     }
 	
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		ListNode head = new ListNode(0);
+		head.next = new ListNode(1);
+		head.next.next = new ListNode(2);
+		head.next.next.next = new ListNode(3);
+		System.out.println(head.next.val);
+		System.out.println(removeNthFromEnd(head, 3).next.val);
 	}
 
 }
